@@ -6,6 +6,7 @@
   --accent-color: #2196f3;
   --secondary-background-color: #2f303a;
   --white-color: #ffffff;
+  --icon-color: #afb1b8;
 }
 body {
   color: var(--primary-text-color);
@@ -114,6 +115,7 @@ header {
   gap: 10px;
 
   color: var(--primary-text-color);
+  fill: var(--primary-text-color);
   text-decoration: none;
   font-weight: 500;
   line-height: 1.14;
@@ -152,7 +154,10 @@ header {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../images/hero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .primary-button {
   display: flex;
@@ -176,6 +181,7 @@ header {
 .primary-button:hover,
 .primary-button:focus {
   background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Переваги */
@@ -200,6 +206,15 @@ header {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+}
+.features-icon {
+  display: flex;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Чим ми займаємось */
@@ -238,7 +253,7 @@ header {
   background-color: var(--white-color);
   font-size: 16px;
   line-height: 1.19;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 .member-info {
@@ -252,6 +267,51 @@ header {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+}
+.team-icon {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  fill: var(--icon-color);
+}
+.social-link:hover {
+  background-color: var(--accent-color);
+  fill: white;
+}
+
+/* Постійні клієнти */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-list {
+  display: flex;
+  gap: 30px;
+}
+.client-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  cursor: pointer;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  fill: var(--icon-color);
+}
+.client-position:hover {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* Друга сторінка */
@@ -290,6 +350,11 @@ header {
 .button-item:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filter-item:hover,
+.filter-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* Позиція фільтру */
@@ -333,6 +398,13 @@ header {
   padding-bottom: 60px;
   background-color: var(--secondary-background-color);
 }
+.info-footer {
+  display: flex;
+  align-items: baseline;
+}
+.contact-info {
+  margin-right: 70px;
+}
 .logo-footer {
   display: block;
   margin-bottom: 20px;
@@ -359,4 +431,20 @@ header {
 }
 .contact-item {
   margin-bottom: 9px;
+}
+.follow-us > p {
+  margin-bottom: 20px;
+
+  color: var(--white-color);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.follow-us-list {
+  display: flex;
+  gap: 10px;
+}
+.social-link-footer {
+  fill: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
